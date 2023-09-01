@@ -1,0 +1,18 @@
+.login-container__box {
+    border-radius: 8px;
+    border: 2px solid #969696;
+    background: #27292D;
+    width: 463px;
+    height: 420px;
+}
+
+.login-container__box-title {
+    color: #6B6C70;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
