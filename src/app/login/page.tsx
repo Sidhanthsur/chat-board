@@ -1,6 +1,16 @@
+"use client";
+import FormInput from '../components/FormInput'
 import './login.css'
 import Image from 'next/image'
+import useLogin from './useLogin'
 const Login = () => {
+
+    const {
+        password,
+        email,
+        setEmail,
+        setPassword
+    } = useLogin()
     return (
         <div className="login-container">
             <Image
@@ -16,6 +26,13 @@ const Login = () => {
                 </div>
                 <div className='login-container__box-subtitle'>
                     Log into your account
+                </div>
+
+
+                <div className='mx-4 w-full'>
+                    <FormInput value={email} setValue={setEmail} placeholder='Email or username' />
+                    <FormInput value={password} setValue={setPassword} type='password' placeholder='Password'
+                        className='mt-3' />
                 </div>
             </div>
         </div>
