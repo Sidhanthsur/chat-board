@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Post } from '../types/Post'
 
 const temporaryPosts = [
     {
@@ -20,7 +21,7 @@ const temporaryPosts = [
 ]
 
 const useDashboard = () => {
-    const [posts, setPosts] = useState([temporaryPosts])
+    const [posts, setPosts] = useState<Post[]>(temporaryPosts)
     return {
         posts
     }
