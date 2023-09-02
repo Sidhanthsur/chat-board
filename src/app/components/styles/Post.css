@@ -1,0 +1,27 @@
+.post {
+    width: 700px;
+    height: 223px;
+    border-radius: 8px;
+    border: 2px solid #35373B;
+    background: #27292D;
+}
+
+.post__profile {
+    border-radius: 50%;
+}
+
+.post__author-name {
+    color: #C5C7CA;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.post__time {
+    color: #7F8084;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
