@@ -4,12 +4,25 @@ import useDashboard from './useDashboard'
 import Post from '../components/Post'
 import DashboardBox from '../components/DashboardBox'
 import FormButton from '../components/FormButton'
+import { useState } from 'react'
+import Modal from '../components/Modal'
+import LoginForm from '../components/LoginForm'
+import useLogin from '../login/useLogin'
 
 
 export default function Dashboard() {
     const { posts } = useDashboard()
+    const [isLoginModalVisible, setIsLoginModalVisible] = useState(true)
+    const { email, setEmail, setPassword, password } = useLogin()
     return (
         <div className="dashboard">
+            {
+                isLoginModalVisible && (
+                    <Modal>
+                        <LoginForm onLoggedIn={() => setIsLoginModalVisible(false)} email={email} password={password} setEmail={setEmail} setPassword={setPassword} />
+                    </Modal>
+                )
+            }
             <div className='dashboard__name'>Hello Jane</div>
             <div className='dashboard__sub-title pt-3'>How are you doing today? Would you like to share something with the community 🤗</div>
 
