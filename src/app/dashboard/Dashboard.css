@@ -18,3 +18,11 @@
     font-weight: 400;
     line-height: 150%;
 }
+
+.dashboard__new-post-title {
+    color: #C5C7CA;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

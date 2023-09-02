@@ -12,6 +12,8 @@ interface LoginFormProps {
 }
 
 export default function LoginForm({ email, setEmail, password, setPassword, onLoggedIn }: LoginFormProps) {
+
+    const isButtonDisabled = !email || !password
     return (
 
         <div className='login-form'>
@@ -36,7 +38,7 @@ export default function LoginForm({ email, setEmail, password, setPassword, onLo
                     hint='Enter your password'
                     onRightTextClick={() => console.log('clicked')} />
 
-                <FormButton onButtonClick={onLoggedIn} title='Login now' className='mt-5' />
+                <FormButton isDisabled={isButtonDisabled} onButtonClick={onLoggedIn} title='Login now' className='mt-5' />
                 <FormTextButton question='Not registered yet?' onButtonClick={() => console.log('clicked')} title='Register →' className='mt-3' />
             </div>
         </div>
