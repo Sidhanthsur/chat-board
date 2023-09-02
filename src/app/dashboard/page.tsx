@@ -1,6 +1,6 @@
 'use client'
 import './Dashboard.css'
-import useDashboard from './useDashboard'
+import useDashboard from '../hooks/useDashboard'
 import Post from '../components/Post'
 import DashboardBox from '../components/DashboardBox'
 import FormButton from '../components/FormButton'
