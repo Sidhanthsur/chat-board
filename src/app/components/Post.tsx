@@ -2,7 +2,7 @@ import './styles/Post.css'
 import { Post } from '../types/Post'
 import Image from 'next/image'
 
-export default function Post({ profileImage, author, time }: Post) {
+export default function Post({ profileImage, author, time, post, emoticon }: Post) {
     return (
         <div className='post p-6'>
 
@@ -29,6 +29,13 @@ export default function Post({ profileImage, author, time }: Post) {
                     height={20}
                     alt="dots"
                     src="/dots.svg" />
+            </div>
+
+            <div className='post__box mt-5'>
+                <div className='post__emoticon'>
+                    {emoticon}
+                </div>
+                <div className='post__description ml-4'>{post}</div>
             </div>
 
 

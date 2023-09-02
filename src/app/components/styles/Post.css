@@ -1,5 +1,5 @@
 .post {
-    width: 700px;
+    width: 800px;
     height: 223px;
     border-radius: 8px;
     border: 2px solid #35373B;
@@ -24,4 +24,31 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+.post__box {
+    border-radius: 8px;
+    background: #191920;
+    min-height: 6.75rem;
+    display: flex;
+    padding: 1rem;
+}
+
+.post__emoticon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #27292D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post__description {
+    color: #7F8084;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 551px;
 }
