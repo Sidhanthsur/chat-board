@@ -7,19 +7,52 @@ import FormButton from '../components/FormButton'
 import { useState } from 'react'
 import Modal from '../components/Modal'
 import LoginForm from '../components/LoginForm'
-import useLogin from '../login/useLogin'
+import SignupForm from '../components/SignupForm'
+import useLogin from '../hooks/useLogin'
+import useSignup from '../hooks/useSignup'
+
 
 
 export default function Dashboard() {
     const { posts } = useDashboard()
-    const [isLoginModalVisible, setIsLoginModalVisible] = useState(true)
+    const [isLoginModalVisible, setIsLoginModalVisible] = useState(false)
+    const [isSignupModalVisible, setIsSignupModalVisible] = useState(true)
     const { email, setEmail, setPassword, password } = useLogin()
+    const { email: newEmail, password: newPassword, username,
+        setEmail: setNewEmail, setPassword: setNewPassword, setUsername } = useSignup()
+
+    const closeAllModals = () => {
+        setIsLoginModalVisible(false)
+        setIsSignupModalVisible(false)
+    }
     return (
         <div className="dashboard">
             {
                 isLoginModalVisible && (
                     <Modal>
-                        <LoginForm onLoggedIn={() => setIsLoginModalVisible(false)} email={email} password={password} setEmail={setEmail} setPassword={setPassword} />
+                        <LoginForm onTextButtonClicked={() => {
+                            setIsSignupModalVisible(true)
+                            setIsLoginModalVisible(false)
+                        }} onLoggedIn={() => setIsLoginModalVisible(false)} email={email} password={password} setEmail={setEmail} setPassword={setPassword} />
+                    </Modal>
+                )
+            }
+            {
+                isSignupModalVisible && (
+                    <Modal>
+                        <SignupForm
+                            onTextButtonClicked={() => {
+                                setIsSignupModalVisible(false)
+                                setIsLoginModalVisible(true)
+                            }}
+                            username={username}
+                            email={newEmail}
+                            password={newPassword}
+                            setUserName={setUsername}
+                            setEmail={setNewEmail}
+                            setPassword={setNewPassword}
+                            onClose={closeAllModals}
+                            onLoggedIn={() => setIsLoginModalVisible(false)} />
                     </Modal>
                 )
             }

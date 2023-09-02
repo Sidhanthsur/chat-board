@@ -2,7 +2,7 @@
 
 import './login.css'
 import Image from 'next/image'
-import useLogin from './useLogin'
+import useLogin from '../hooks/useLogin'
 import LoginForm from '../components/LoginForm';
 import { useRouter } from 'next/navigation'
 
@@ -24,7 +24,9 @@ const Login = () => {
                 src="/logo.png"
                 className='mb-8' />
 
-            <LoginForm onLoggedIn={() => router.push('/dashboard')} email={email} password={password} setPassword={setPassword} setEmail={setEmail} />
+            <LoginForm
+                onTextButtonClicked={() => console.log('close')}
+                onLoggedIn={() => router.push('/dashboard')} email={email} password={password} setPassword={setPassword} setEmail={setEmail} />
 
         </div>
     )

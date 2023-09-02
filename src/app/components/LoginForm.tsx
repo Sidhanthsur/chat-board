@@ -9,9 +9,10 @@ interface LoginFormProps {
     setEmail: (email: string) => void;
     setPassword: (password: string) => void;
     onLoggedIn: () => void;
+    onTextButtonClicked: () => void;
 }
 
-export default function LoginForm({ email, setEmail, password, setPassword, onLoggedIn }: LoginFormProps) {
+export default function LoginForm({ email, setEmail, password, setPassword, onLoggedIn, onTextButtonClicked }: LoginFormProps) {
 
     const isButtonDisabled = !email || !password
     return (
@@ -39,7 +40,7 @@ export default function LoginForm({ email, setEmail, password, setPassword, onLo
                     onRightTextClick={() => console.log('clicked')} />
 
                 <FormButton isDisabled={isButtonDisabled} onButtonClick={onLoggedIn} title='Login now' className='mt-5' />
-                <FormTextButton question='Not registered yet?' onButtonClick={() => console.log('clicked')} title='Register →' className='mt-3' />
+                <FormTextButton question='Not registered yet?' onButtonClick={onTextButtonClicked} title='Register →' className='mt-3' />
             </div>
         </div>
     )

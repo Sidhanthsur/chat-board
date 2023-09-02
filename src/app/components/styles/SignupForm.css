@@ -1,0 +1,36 @@
+.signup-form {
+    border-radius: 8px;
+    border: 2px solid #969696;
+    background: #27292D;
+    width: 463px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.signup-form__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.signup-form__title {
+    color: #6B6C70;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+
+.signup-form__subtitle {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 45px;
+}
