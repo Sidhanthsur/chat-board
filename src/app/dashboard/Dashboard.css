@@ -1,0 +1,20 @@
+.dashboard {
+    padding: 4rem 23rem;
+}
+
+.dashboard__name {
+    color: #C5C7CA;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.dashboard__sub-title {
+    color: #7F8084;
+    width: 580px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
