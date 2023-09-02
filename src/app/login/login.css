@@ -6,34 +6,3 @@
     height: 100vh;
     width: 100%;
 }
-
-.login-container__box {
-    border-radius: 8px;
-    border: 2px solid #969696;
-    background: #27292D;
-    width: 463px;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-}
-
-.login-container__box-title {
-    color: #6B6C70;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.42px;
-    text-transform: uppercase;
-}
-
-.login-container__box-subtitle {
-    color: #FFF;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin-bottom: 45px;
-}
