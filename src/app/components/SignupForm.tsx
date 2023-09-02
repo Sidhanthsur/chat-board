@@ -11,12 +11,12 @@ type SignupFormProps = {
     setEmail: (email: string) => void;
     setPassword: (password: string) => void;
     setUserName: (username: string) => void;
-    onLoggedIn: () => void;
+    onSignupClicked: () => void;
     onClose: () => void;
     onTextButtonClicked: () => void;
 }
 
-export default function SignupForm({ email, setEmail, password, setPassword, onLoggedIn, username, setUserName, onClose
+export default function SignupForm({ email, setEmail, password, setPassword, onSignupClicked, username, setUserName, onClose
     , onTextButtonClicked }: SignupFormProps) {
 
     const isButtonDisabled = !email || !password || !username
@@ -58,7 +58,7 @@ export default function SignupForm({ email, setEmail, password, setPassword, onL
                     hint='Enter your password'
                     onRightTextClick={() => console.log('clicked')} />
 
-                <FormButton isDisabled={isButtonDisabled} onButtonClick={onLoggedIn} title='Continue' className='mt-5' />
+                <FormButton isDisabled={isButtonDisabled} onButtonClick={onSignupClicked} title='Continue' className='mt-5' />
                 <FormTextButton question='Already have an account?' onButtonClick={onTextButtonClicked} title='Login →' className='mt-3' />
             </div>
         </div>

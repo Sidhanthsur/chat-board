@@ -16,7 +16,7 @@ import useSignup from '../hooks/useSignup'
 export default function Dashboard() {
     const { posts } = useDashboard()
     const [isLoginModalVisible, setIsLoginModalVisible] = useState(false)
-    const [isSignupModalVisible, setIsSignupModalVisible] = useState(true)
+    const [isSignupModalVisible, setIsSignupModalVisible] = useState(false)
     const { email, setEmail, setPassword, password } = useLogin()
     const { email: newEmail, password: newPassword, username,
         setEmail: setNewEmail, setPassword: setNewPassword, setUsername } = useSignup()
@@ -33,7 +33,7 @@ export default function Dashboard() {
                         <LoginForm onTextButtonClicked={() => {
                             setIsSignupModalVisible(true)
                             setIsLoginModalVisible(false)
-                        }} onLoggedIn={() => setIsLoginModalVisible(false)} email={email} password={password} setEmail={setEmail} setPassword={setPassword} />
+                        }} onLoginClicked={() => setIsLoginModalVisible(false)} email={email} password={password} setEmail={setEmail} setPassword={setPassword} />
                     </Modal>
                 )
             }
@@ -52,7 +52,7 @@ export default function Dashboard() {
                             setEmail={setNewEmail}
                             setPassword={setNewPassword}
                             onClose={closeAllModals}
-                            onLoggedIn={() => setIsLoginModalVisible(false)} />
+                            onSignupClicked={() => setIsLoginModalVisible(false)} />
                     </Modal>
                 )
             }
