@@ -3,6 +3,7 @@ import FormInput from '../components/FormInput'
 import './login.css'
 import Image from 'next/image'
 import useLogin from './useLogin'
+import FormButton from '../components/FormButton';
 const Login = () => {
 
     const {
@@ -41,6 +42,8 @@ const Login = () => {
                         rightText='Forgot Password ?'
                         hint='Enter your password'
                         onRightTextClick={() => console.log('clicked')} />
+
+                    <FormButton onButtonClick={() => console.log('clicked')} title='Login now' className='mt-5' />
                 </div>
             </div>
         </div>
