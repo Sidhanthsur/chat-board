@@ -15,7 +15,6 @@
     height: 420px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 1.5rem;
 }
@@ -36,4 +35,5 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-bottom: 45px;
 }

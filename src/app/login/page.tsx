@@ -30,10 +30,16 @@ const Login = () => {
 
 
                 <div className='mx-4 w-full'>
-                    <FormInput value={email} setValue={setEmail} placeholder='Email or username' />
+                    <FormInput
+                        value={email}
+                        setValue={setEmail}
+                        placeholder='Email or username'
+                        hint='Enter your email or username' />
+
                     <FormInput value={password} setValue={setPassword} type='password' placeholder='Password'
-                        className='mt-5'
+                        className='mt-4'
                         rightText='Forgot Password ?'
+                        hint='Enter your password'
                         onRightTextClick={() => console.log('clicked')} />
                 </div>
             </div>
