@@ -56,7 +56,7 @@ export default function Dashboard() {
                             setEmail={setNewEmail}
                             setPassword={setNewPassword}
                             onClose={closeAllModals}
-                            onSignupClicked={() => setIsLoginModalVisible(false)} />
+                            onSignupClicked={closeAllModals} />
                     </Modal>
                 )
             }
