@@ -34,7 +34,7 @@ export default function Dashboard() {
                         title="Post"
                         className='float-right'
                         variant='small'
-                        onButtonClick={() => console.log('click')} />
+                        onButtonClick={() => setIsLoginModalVisible(true)} />
                 </div>
             </DashboardBox>
             <div>
