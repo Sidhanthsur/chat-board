@@ -2,6 +2,7 @@
 import './Dashboard.css'
 import useDashboard from './useDashboard'
 import Post from '../components/Post'
+import DashboardBox from '../components/DashboardBox'
 
 
 export default function Dashboard() {
@@ -15,7 +16,10 @@ export default function Dashboard() {
                 Posts
                 {
                     posts.map((post) => (
-                        <Post {...post} key={post.id} />
+                        <DashboardBox key={post.id} className='mb-4'>
+                            <Post {...post} />
+                        </DashboardBox>
+
                     ))
                 }
             </div>

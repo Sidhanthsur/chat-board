@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Post({ profileImage, author, time, post, emoticon }: Post) {
     return (
-        <div className='post p-6 mb-4'>
+        <div className='p-6 mb-4'>
 
             <div className='flex justify-between'>
                 <div className='flex'>
