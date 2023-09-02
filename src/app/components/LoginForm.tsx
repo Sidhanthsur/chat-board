@@ -3,6 +3,7 @@ import FormButton from './FormButton';
 import FormTextButton from './FormTextButton';
 import './styles/LoginForm.css'
 import Image from 'next/image'
+import { useEffect } from 'react';
 
 interface LoginFormProps {
     email: string;
@@ -16,6 +17,13 @@ interface LoginFormProps {
 }
 
 export default function LoginForm({ email, setEmail, password, setPassword, onLoginClicked, onTextButtonClicked, isModal = false, onModalClose }: LoginFormProps) {
+
+    useEffect(() => {
+        return () => {
+            setEmail('')
+            setPassword('')
+        }
+    }, [])
 
     const isButtonDisabled = !email || !password
     return (

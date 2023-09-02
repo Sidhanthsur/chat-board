@@ -3,6 +3,7 @@ import FormButton from './FormButton';
 import FormTextButton from './FormTextButton';
 import './styles/SignupForm.css'
 import Image from 'next/image'
+import { useEffect } from 'react';
 
 type SignupFormProps = {
     email: string;
@@ -19,7 +20,17 @@ type SignupFormProps = {
 export default function SignupForm({ email, setEmail, password, setPassword, onSignupClicked, username, setUserName, onClose
     , onTextButtonClicked }: SignupFormProps) {
 
+    useEffect(() => {
+        return () => {
+            setEmail('')
+            setPassword('')
+            setUserName('')
+        }
+    }, [])
+
     const isButtonDisabled = !email || !password || !username
+
+
     return (
 
         <div className='signup-form'>
