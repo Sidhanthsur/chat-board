@@ -31,10 +31,13 @@ export default function Dashboard() {
             {
                 isLoginModalVisible && (
                     <Modal>
-                        <LoginForm onTextButtonClicked={() => {
-                            setIsSignupModalVisible(true)
-                            setIsLoginModalVisible(false)
-                        }} onLoginClicked={() => setIsLoginModalVisible(false)} email={email} password={password} setEmail={setEmail} setPassword={setPassword} />
+                        <LoginForm
+                            isModal
+                            onModalClose={closeAllModals}
+                            onTextButtonClicked={() => {
+                                setIsSignupModalVisible(true)
+                                setIsLoginModalVisible(false)
+                            }} onLoginClicked={() => setIsLoginModalVisible(false)} email={email} password={password} setEmail={setEmail} setPassword={setPassword} />
                     </Modal>
                 )
             }

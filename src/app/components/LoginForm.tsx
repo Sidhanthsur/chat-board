@@ -2,6 +2,7 @@ import FormInput from './FormInput'
 import FormButton from './FormButton';
 import FormTextButton from './FormTextButton';
 import './styles/LoginForm.css'
+import Image from 'next/image'
 
 interface LoginFormProps {
     email: string;
@@ -10,14 +11,26 @@ interface LoginFormProps {
     setPassword: (password: string) => void;
     onLoginClicked: () => void;
     onTextButtonClicked: () => void;
+    isModal?: boolean;
+    onModalClose?: () => void;
 }
 
-export default function LoginForm({ email, setEmail, password, setPassword, onLoginClicked, onTextButtonClicked }: LoginFormProps) {
+export default function LoginForm({ email, setEmail, password, setPassword, onLoginClicked, onTextButtonClicked, isModal = false, onModalClose }: LoginFormProps) {
 
     const isButtonDisabled = !email || !password
     return (
 
         <div className='login-form'>
+
+            {
+                isModal && <Image
+                    onClick={onModalClose}
+                    width={24}
+                    height={24}
+                    src="/close.png"
+                    alt="close"
+                    className='cursor-pointer login-form__close' />
+            }
             <div className='login-form__title mb-1'>
                 Welcome Back
             </div>
