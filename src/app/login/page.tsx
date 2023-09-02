@@ -4,6 +4,7 @@ import './login.css'
 import Image from 'next/image'
 import useLogin from './useLogin'
 import FormButton from '../components/FormButton';
+import FormTextButton from '../components/FormTextButton';
 const Login = () => {
 
     const {
@@ -44,6 +45,7 @@ const Login = () => {
                         onRightTextClick={() => console.log('clicked')} />
 
                     <FormButton onButtonClick={() => console.log('clicked')} title='Login now' className='mt-5' />
+                    <FormTextButton question='Not registered yet?' onButtonClick={() => console.log('clicked')} title='Register →' className='mt-3' />
                 </div>
             </div>
         </div>

@@ -1,0 +1,19 @@
+.form-text-button {}
+
+.form-text-button__question {
+    color: #7F8084;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.form-text-button__title {
+    color: #C5C7CA;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.form-button__title {}
