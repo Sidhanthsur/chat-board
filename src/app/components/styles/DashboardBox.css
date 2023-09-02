@@ -5,3 +5,39 @@
     border: 2px solid #35373B;
     background: #27292D;
 }
+
+.dashboard-box__new-post {
+    border-radius: 8px;
+    background: #191920;
+    min-height: 6.75rem;
+    display: flex;
+    padding: 1rem;
+}
+
+.dashboard-box__new-post-emoticon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #27292D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-box__new-post-description {
+    color: #7F8084;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 90%;
+    background: transparent;
+    margin-left: 1rem;
+    /* 24px */
+
+}
+
+.dashboard-box__new-post-description:focus {
+    outline: none;
+    border: gray;
+}

@@ -20,6 +20,7 @@ export default function Dashboard() {
     const { email, setEmail, setPassword, password } = useLogin()
     const { email: newEmail, password: newPassword, username,
         setEmail: setNewEmail, setPassword: setNewPassword, setUsername } = useSignup()
+    const [newPost, setNewPost] = useState('')
 
     const closeAllModals = () => {
         setIsLoginModalVisible(false)
@@ -63,9 +64,16 @@ export default function Dashboard() {
                 <div>
                     <span className='dashboard__new-post-title'>Create Post</span>
 
+                    <div className='dashboard-box__new-post'>
+                        <div className='dashboard-box__new-post-emoticon'>
+                            🏝️
+                        </div>
+                        <textarea className='dashboard-box__new-post-description' onChange={(e) => setNewPost(e.target.value)} value={newPost} />
+                    </div>
+
                     <FormButton
                         title="Post"
-                        className='float-right'
+                        className='float-right mt-2'
                         variant='small'
                         onButtonClick={() => setIsLoginModalVisible(true)} />
                 </div>
