@@ -1,6 +1,6 @@
 .post {
     width: 800px;
-    height: 223px;
+    min-height: 223px;
     border-radius: 8px;
     border: 2px solid #35373B;
     background: #27292D;
@@ -51,4 +51,12 @@
     font-weight: 400;
     line-height: 150%;
     width: 551px;
+}
+
+.post__comments {
+    color: #7F8084;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }

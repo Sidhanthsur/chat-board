@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Post({ profileImage, author, time, post, emoticon }: Post) {
     return (
-        <div className='post p-6'>
+        <div className='post p-6 mb-4'>
 
             <div className='flex justify-between'>
                 <div className='flex'>
@@ -36,6 +36,15 @@ export default function Post({ profileImage, author, time, post, emoticon }: Pos
                     {emoticon}
                 </div>
                 <div className='post__description ml-4'>{post}</div>
+            </div>
+
+            <div className='flex mt-2 items-center'>
+                <Image
+                    width={20}
+                    height={20}
+                    alt="comments"
+                    src="/chat.svg" />
+                <span className='post__comments ml-2'>24 comments</span>
             </div>
 
 
