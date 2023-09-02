@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './FormInput.css'
+import './styles/FormInput.css'
 import Image from 'next/image'
 
 interface FormProps {

@@ -1,5 +1,5 @@
 
-import './FormTextButton.css'
+import './styles/FormTextButton.css'
 interface ButtonProps {
     question?: string;
     title: string;

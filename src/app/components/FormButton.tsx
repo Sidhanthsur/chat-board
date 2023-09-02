@@ -1,5 +1,5 @@
 
-import './FormButton.css'
+import './styles/FormButton.css'
 interface ButtonProps {
     title: string;
     className?: string;

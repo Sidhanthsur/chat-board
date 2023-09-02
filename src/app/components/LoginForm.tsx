@@ -1,16 +1,17 @@
 import FormInput from './FormInput'
 import FormButton from './FormButton';
 import FormTextButton from './FormTextButton';
-import './LoginForm.css'
+import './styles/LoginForm.css'
 
 interface LoginFormProps {
     email: string;
     password: string;
     setEmail: (email: string) => void;
     setPassword: (password: string) => void;
+    onLoggedIn: () => void;
 }
 
-export default function LoginForm({ email, setEmail, password, setPassword }: LoginFormProps) {
+export default function LoginForm({ email, setEmail, password, setPassword, onLoggedIn }: LoginFormProps) {
     return (
 
         <div className='login-form'>
@@ -35,7 +36,7 @@ export default function LoginForm({ email, setEmail, password, setPassword }: Lo
                     hint='Enter your password'
                     onRightTextClick={() => console.log('clicked')} />
 
-                <FormButton onButtonClick={() => console.log('clicked')} title='Login now' className='mt-5' />
+                <FormButton onButtonClick={onLoggedIn} title='Login now' className='mt-5' />
                 <FormTextButton question='Not registered yet?' onButtonClick={() => console.log('clicked')} title='Register →' className='mt-3' />
             </div>
         </div>
